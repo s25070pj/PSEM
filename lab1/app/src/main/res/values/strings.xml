@@ -5,6 +5,7 @@
     <string name="result">Twoje BMI wynosi: </string>
     <string name="height">Wzrost (cm)</string>
     <string name="weight">Waga (kg)</string>
+    <string name="invalidInput">Wpisz wszystkie wymagane dane</string>
     <string name="itMeans">\nOznacza to:</string>
     <string name="underweight">Niedowage</string>
     <string name="optimum">Wagę optymalną</string>

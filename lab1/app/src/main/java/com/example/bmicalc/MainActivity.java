@@ -36,6 +36,12 @@ public class MainActivity extends AppCompatActivity {
                 weight = inputWeight.getText().toString().trim();
                 height = inputHeight.getText().toString().trim();
 
+                if (isValidNumber(weight) || isValidNumber(height)) {
+                    String resultText = getString(R.string.invalidInput);
+                    textResult.setText(resultText);
+                    return;
+                }
+
                 double bmi = calculateBMI(Integer.parseInt(weight), Integer.parseInt(height));
 
                 String resultInfo = getString(R.string.result) + " " +
@@ -65,4 +71,12 @@ public class MainActivity extends AppCompatActivity {
         return (double) weight * 10000 / (height * height);
     }
 
+    private boolean isValidNumber(String value) {
+        try {
+            int number = Integer.parseInt(value);
+            return number < 1 || number > 300;
+        } catch (NumberFormatException e) {
+            return true;
+        }
+    }
 }
