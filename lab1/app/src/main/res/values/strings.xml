@@ -1,7 +1,13 @@
 <resources>
-   <string name="app_name">Tip Calculator</string>
-   <string name="enter_amount">Enter Amount</string>
-   <string name="tip_percentage">15%</string>
-   <string name="tip">Tip</string>
-   <string name="total">Total</string>
+    <string name="app_name">bmicalc</string>
+    <string name="first_fragment_label">Kalkulator BMI</string>
+    <string name="submit">Sprawdź</string>
+    <string name="result">Twoje BMI wynosi: </string>
+    <string name="height">Wzrost (cm)</string>
+    <string name="weight">Waga (kg)</string>
+    <string name="itMeans">\nOznacza to:</string>
+    <string name="underweight">Niedowage</string>
+    <string name="optimum">Wagę optymalną</string>
+    <string name="overweight">Nadwage</string>
+    <string name="obese">Otyłość</string>
 </resources>

@@ -1,4 +1,4 @@
-package com.example.tipper;
+package com.example.bmicalc;
 
 import org.junit.Test;
 
