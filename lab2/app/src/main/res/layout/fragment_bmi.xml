@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true"
+    tools:context=".ui.bmi.BMIFragment">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:gravity="center"
+        android:padding="16dp">
+
+        <EditText
+            android:id="@+id/inputWeight"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:autofillHints="weight"
+            android:hint="@string/weight"
+            android:inputType="numberDecimal"
+            android:gravity="center"/>
+
+        <EditText
+            android:id="@+id/inputHeight"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:autofillHints="height"
+            android:hint="@string/height"
+            android:inputType="numberDecimal"
+            android:gravity="center"/>
+
+        <Button
+            android:id="@+id/submit"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/submit"
+            android:layout_marginTop="16dp"/>
+
+        <TextView
+            android:id="@+id/textResult"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:text=""
+            android:textAlignment="center"
+            android:textSize="18sp" />
+    </LinearLayout>
+</androidx.core.widget.NestedScrollView>

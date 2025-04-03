@@ -1,6 +1,46 @@
 <resources>
-    <string name="app_name">lab2</string>
-    <string name="title_home">Home</string>
-    <string name="title_dashboard">Dashboard</string>
-    <string name="title_notifications">Notifications</string>
+    <string name="app_name">Fitness App s25070</string>
+
+    <string name="title_calories_calc">Calories Calculator</string>
+    <string name="title_recommender">Diet Recommender</string>
+    <string name="title_bmi">BMI Calculator</string>
+
+    <string name="submit">Oblicz BMI</string>
+    <string name="result">Twoje BMI wynosi: </string>
+    <string name="height">Wzrost (cm)</string>
+    <string name="weight">Waga (kg)</string>
+    <string name="invalidInput">Wprowadź liczby z zakresu 1-250</string>
+    <string name="underweight">Niedowaga</string>
+    <string name="optimum">Waga optymalna</string>
+    <string name="overweight">Nadwaga</string>
+    <string name="obese">Otyłość</string>
+
+    <string-array name="activity_levels">
+        <item>Brak aktywności</item>
+        <item>Lekka aktywność</item>
+        <item>Średnia aktywność</item>
+        <item>Duża aktywność</item>
+        <item>Bardzo duża aktywność</item>
+    </string-array>
+
+    <string name="hint_age">Wiek</string>
+    <string name="hint_weight">Waga (kg)</string>
+    <string name="hint_height">Wzrost (cm)</string>
+    <string name="gender_male">Mężczyzna</string>
+    <string name="gender_female">Kobieta</string>
+    <string name="calculate_button">Oblicz</string>
+    <string name="fieldsRequired">Proszę wypełnić wszystkie pola.</string>
+    <string name="harrisResult">Twoje dzienne zapotrzebowanie kaloryczne: </string>
+    <string name="harrisUnit">kcal</string>
+
+
+    <string name="hint_caloric_needs">Wprowadź swoje zapotrzebowanie kaloryczne</string>
+    <string name="button_calculate_recommendations">Pokaż rekomendowane dania</string>
+    <string name="low_calorie_diet">Rekomendacje dla diety niskokalorycznej:</string>
+    <string name="balanced_diet">Rekomendacje dla diety zrównoważonej:</string>
+    <string name="high_calorie_diet">Rekomendacje dla diety wysokokalorycznej:</string>
+    <string name="enter_caloric_needs">Proszę wprowadzić swoje zapotrzebowanie kaloryczne.</string>
+    <string name="low_calorie_recommendations">Rekomendacje dla diety niskokalorycznej:\n\n1. Grillowany łosoś z warzywami (320 kcal)\nSkładniki: filet z łososia, cukinia, papryka, brokuły, cytryna, zioła.\n\n2. Kremowa zupa z soczewicy (230 kcal)\nSkładniki: czerwona soczewica, marchew, cebula, czosnek, bulion warzywny, kurkuma.\n\n3. Koktajl jagodowy z jogurtem greckim (180 kcal)\nSkładniki: jogurt grecki 0%, jagody, borówki, nasiona chia.</string>
+    <string name="balanced_diet_recommendations">Rekomendacje dla diety zrównoważonej:\n\n1. Kasza bulgur z pieczonymi warzywami i tofu (550 kcal)\nSkładniki: kasza bulgur, tofu, bakłażan, cukinia, papryka, oliwa, czosnek.\n\n2. Wrap z hummusem i indykiem (480 kcal)\nSkładniki: tortilla pełnoziarnista, indyk, hummus, rukola, pomidor, ogórek.\n\n3. Sałatka z quinoa, awokado i jajkiem (420 kcal)\nSkładniki: quinoa, awokado, jajko, pomidorki koktajlowe, szpinak, oliwa z oliwek, cytryna.</string>
+    <string name="high_calorie_recommendations">Rekomendacje dla diety wysokokalorycznej:\n\n1. Risotto z grzybami i kurczakiem (750 kcal)\nSkładniki: ryż arborio, pierś z kurczaka, grzyby leśne, cebula, wino białe, bulion, parmezan.\n\n2. Bowl z batata, czarnej fasoli i awokado (680 kcal)\nSkładniki: batat, czarna fasola, awokado, kukurydza, czerwona cebula, kolendra, limonka.\n\n3. Owsianka na mleku kokosowym z orzechami i owocami (520 kcal)\nSkładniki: płatki owsiane, mleko kokosowe, banan, miód, mieszanka orzechów, jagody.</string>
 </resources>
