@@ -18,6 +18,8 @@ import androidx.fragment.app.Fragment;
 
 import com.example.lab2.R;
 
+import java.util.Objects;
+
 public class CaloriesCalculatorFragment extends Fragment {
 
     private EditText ageInput, weightInput, heightInput;
@@ -48,9 +50,7 @@ public class CaloriesCalculatorFragment extends Fragment {
     }
 
     private void setupClickListener() {
-        calculateButton.setOnClickListener(v -> {
-            checkInputAndCalculate();
-        });
+        calculateButton.setOnClickListener(v -> checkInputAndCalculate());
     }
 
     private void checkInputAndCalculate() {
@@ -119,7 +119,7 @@ public class CaloriesCalculatorFragment extends Fragment {
     }
 
     private void hideKeyboard() {
-        View view = getActivity().getCurrentFocus();
+        View view = Objects.requireNonNull(getActivity()).getCurrentFocus();
         if (view != null) {
             InputMethodManager imm = (InputMethodManager) getActivity().getSystemService(Context.INPUT_METHOD_SERVICE);
             imm.hideSoftInputFromWindow(view.getWindowToken(), 0);

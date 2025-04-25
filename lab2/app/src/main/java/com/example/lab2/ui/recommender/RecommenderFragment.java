@@ -41,9 +41,7 @@ public class RecommenderFragment extends Fragment {
     }
 
     private void setupButtonListener() {
-        calculateBtn.setOnClickListener(view -> {
-            processUserInput();
-        });
+        calculateBtn.setOnClickListener(view -> processUserInput());
     }
 
     private void processUserInput() {
