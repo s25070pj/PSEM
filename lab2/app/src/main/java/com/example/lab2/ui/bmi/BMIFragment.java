@@ -54,7 +54,7 @@ public class BMIFragment extends Fragment {
         });
     }
 
-    private boolean checkInput(String input) {
+    boolean checkInput(String input) {
         try {
             double value = Double.parseDouble(input);
             return value > 0 && value <= 300;
