@@ -43,4 +43,9 @@
     <string name="low_calorie_recommendations">Rekomendacje dla diety niskokalorycznej:\n\n1. Grillowany łosoś z warzywami (320 kcal)\nSkładniki: filet z łososia, cukinia, papryka, brokuły, cytryna, zioła.\n\n2. Kremowa zupa z soczewicy (230 kcal)\nSkładniki: czerwona soczewica, marchew, cebula, czosnek, bulion warzywny, kurkuma.\n\n3. Koktajl jagodowy z jogurtem greckim (180 kcal)\nSkładniki: jogurt grecki 0%, jagody, borówki, nasiona chia.</string>
     <string name="balanced_diet_recommendations">Rekomendacje dla diety zrównoważonej:\n\n1. Kasza bulgur z pieczonymi warzywami i tofu (550 kcal)\nSkładniki: kasza bulgur, tofu, bakłażan, cukinia, papryka, oliwa, czosnek.\n\n2. Wrap z hummusem i indykiem (480 kcal)\nSkładniki: tortilla pełnoziarnista, indyk, hummus, rukola, pomidor, ogórek.\n\n3. Sałatka z quinoa, awokado i jajkiem (420 kcal)\nSkładniki: quinoa, awokado, jajko, pomidorki koktajlowe, szpinak, oliwa z oliwek, cytryna.</string>
     <string name="high_calorie_recommendations">Rekomendacje dla diety wysokokalorycznej:\n\n1. Risotto z grzybami i kurczakiem (750 kcal)\nSkładniki: ryż arborio, pierś z kurczaka, grzyby leśne, cebula, wino białe, bulion, parmezan.\n\n2. Bowl z batata, czarnej fasoli i awokado (680 kcal)\nSkładniki: batat, czarna fasola, awokado, kukurydza, czerwona cebula, kolendra, limonka.\n\n3. Owsianka na mleku kokosowym z orzechami i owocami (520 kcal)\nSkładniki: płatki owsiane, mleko kokosowe, banan, miód, mieszanka orzechów, jagody.</string>
+
+    <string name="title_shopping">Lista zakupów</string>
+    <string name="shopping_list_title">Produkty do kupienia</string>
+
+    <string name="bmi_history_chart_title">Historia Twojego BMI</string>
 </resources>

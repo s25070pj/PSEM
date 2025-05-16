@@ -1,6 +1,7 @@
 package com.example.lab2.ui.bmi;
 
 import android.content.Context;
+import android.graphics.Color;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -12,11 +13,25 @@ import androidx.fragment.app.Fragment;
 
 import com.example.lab2.R;
 import com.example.lab2.databinding.FragmentBmiBinding;
+import com.github.mikephil.charting.charts.LineChart;
+import com.github.mikephil.charting.components.XAxis;
+import com.github.mikephil.charting.data.Entry;
+import com.github.mikephil.charting.data.LineData;
+import com.github.mikephil.charting.data.LineDataSet;
+import com.github.mikephil.charting.formatter.IndexAxisValueFormatter;
 
+import java.text.SimpleDateFormat;
+import java.util.ArrayList;
+import java.util.Calendar;
+import java.util.Date;
 import java.util.Locale;
+import java.util.Random;
 
 public class BMIFragment extends Fragment {
     private FragmentBmiBinding binding;
+    private LineChart bmiChart;
+    private ArrayList<Entry> bmiEntries;
+    private ArrayList<String> dates;
 
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, ViewGroup container,
@@ -28,6 +43,9 @@ public class BMIFragment extends Fragment {
     @Override
     public void onViewCreated(@NonNull View view, Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
+
+        bmiChart = binding.bmiChart;
+        binding.chartContainer.setVisibility(View.GONE);
 
         binding.submit.setOnClickListener(view1 -> {
             String weight = binding.inputWeight.getText().toString().trim();
@@ -45,10 +63,13 @@ public class BMIFragment extends Fragment {
 
             String resultMessage = getString(R.string.result) + " "
                     + String.format(Locale.getDefault(), "%.2f", bmiResult)
-                     + ": "
+                    + ": "
                     + getBmiCategory(bmiResult);
 
             binding.textResult.setText(resultMessage);
+
+            generateBmiChartData(bmiResult);
+            binding.chartContainer.setVisibility(View.VISIBLE);
 
             closeKeyboard(view1);
         });
@@ -80,6 +101,59 @@ public class BMIFragment extends Fragment {
         if (imm != null) {
             imm.hideSoftInputFromWindow(view.getWindowToken(), 0);
         }
+    }
+
+    private void generateBmiChartData(double currentBmi) {
+        bmiEntries = new ArrayList<>();
+        dates = new ArrayList<>();
+
+        Calendar calendar = Calendar.getInstance();
+        SimpleDateFormat sdf = new SimpleDateFormat("MMM", new Locale("pl"));
+
+        float smallDecrement = 0.3f;
+
+        Random random = new Random();
+
+        for (int i = 1; i <= 5; i++) {
+            calendar.add(Calendar.MONTH, -1);
+            Date date = calendar.getTime();
+            dates.add(sdf.format(date));
+
+            float historicalBmi = (float)currentBmi + (smallDecrement * i) + (random.nextFloat() * 0.4f) - 0.2f;;
+            bmiEntries.add(new Entry(i, historicalBmi));
+        }
+
+        ArrayList<Entry> chronologicalEntries = new ArrayList<>();
+        ArrayList<String> chronologicalDates = new ArrayList<>();
+
+        for (int i = bmiEntries.size() - 1; i >= 0; i--) {
+            Entry entry = bmiEntries.get(i);
+            chronologicalEntries.add(new Entry(bmiEntries.size() - 1 - i, entry.getY()));
+            chronologicalDates.add(dates.get(i));
+        }
+
+        bmiEntries = chronologicalEntries;
+        dates = chronologicalDates;
+
+        setupChart();
+    }
+
+    private void setupChart() {
+        LineDataSet dataSet = new LineDataSet(bmiEntries,"");
+        dataSet.setColor(Color.BLUE);
+        dataSet.setCircleColor(Color.BLUE);
+        dataSet.setValueTextSize(12f);
+
+        LineData lineData = new LineData(dataSet);
+        bmiChart.setData(lineData);
+
+        XAxis xAxis = bmiChart.getXAxis();
+        xAxis.setPosition(XAxis.XAxisPosition.BOTTOM);
+        xAxis.setGranularity(1f);
+        xAxis.setValueFormatter(new IndexAxisValueFormatter(dates));
+
+        bmiChart.animateX(1500);
+        bmiChart.invalidate();
     }
 
     @Override

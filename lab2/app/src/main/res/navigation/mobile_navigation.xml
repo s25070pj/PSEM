@@ -22,4 +22,10 @@
         android:name="com.example.lab2.ui.recommender.RecommenderFragment"
         android:label="@string/title_recommender"
         tools:layout="@layout/fragment_recommender" />
+
+    <fragment
+        android:id="@+id/navigation_shopping"
+        android:name="com.example.lab2.ui.shopping.ShoppingListFragment"
+        android:label="@string/title_shopping"
+        tools:layout="@layout/fragment_shopping_list" />
 </navigation>
